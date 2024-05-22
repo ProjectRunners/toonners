@@ -1,15 +1,17 @@
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./App.scss";
 import Login from "./pages/Login";
 import NewRecomand from "./routes/NewRecomand";
 import NewChatRoom from "./routes/NewChatRoom";
 import Signup from "./routes/Signup";
+import Redirect from "./pages/Redirect";
 
 function App() {
   return (
     <>
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route path="/login/kakao" element={<Redirect />} />
         <Route path="/signup/*" element={<Signup />} />
 
         <Route path="/home/chatroom" element={<div>홈 단톡방</div>} />
